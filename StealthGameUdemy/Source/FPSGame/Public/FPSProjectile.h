@@ -7,6 +7,8 @@
 #include "FPSProjectile.generated.h"
 
 
+
+class UParticleSystem;
 class UProjectileMovementComponent;
 class USphereComponent;
 
@@ -25,6 +27,9 @@ protected:
 	/** Projectile movement component */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement")
 	UProjectileMovementComponent* ProjectileMovement;
+
+	UPROPERTY(EditDefaultsOnly, Category = "FX")
+	UParticleSystem * ExplosionEffect;
 
 public:
 
